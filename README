@@ -1,0 +1,81 @@
+Images are in
+/usr/lib/pymodules/python2.6/django/contrib/admin/media/images
+
+Portfolio Management Application
+------------------------------
+
+"When you can measure what you are speaking about, and express it in numbers, you know something about it; but when you cannot express it in numbers, your knowledge is of a meager and unsatisfactory kind; it may be the beginning of knowledge, but you have scarcely in your thoughts advanced to the state of science."
+—William Thomson
+
+ **Released  by Ian Lawrence, ian.lawrence@openbossa.org 08 July 2009.**
+
+- Copyright as per individual files
+*==========================*
+
+It is a commonly accepted fact in business that social projects bring some tangible benefits to an organization. Unfortunately, even if the project is very successful this often does not impact directly on the financial bottom line. And, in a world of razor-thin margins, a set of activities that drive up corporate cost without any directly identifiable return is a tough sell, no matter how worthwhile and noble the project might be.
+The business case for social projects is therefore contingent on finding a suitable method for valuation — one that allows managers to understand the implications of an indirect benefit and then make 'intelligent' decisions about which projects to choose and the most feasible level of resources to commit 
+
+So how should we deal with the problem of measuring the value of a social project? 
+This work starts from the premise that the value of a social project actually is measurable and that the reason it seems difficult is caused by a misunderstanding of what is actually being measured. Terms like goodwill or strategic alignment only seem to be immeasurable because they are ambiguously defined. This work will attempt to remove this type ambiguity by focusing on definitions that can be expressed in units of measurement. Once this is done a range of economic implements can then be used as tools in the decision making process.
+
+As the government is one of INdT's clients, social projects can be valued through the cost to the government if it had to provide the service as opposed to INdT. Other aspects relevant to valuing social projects are: 
+
+'goodwill' which can be measured by:
+
+The percentage of customers that will repeat business with INdT because of the project
+The percentage decrease in the number of complaints received by INdT because of the project
+The percentage of new customers gained by INdT because of the project
+The number of firms more likely to collaborate with INdT because of the project
+The value of the IPR the project might bring to INdT
+The value of the new skills and knowledge the project brings to employees of INdT 
+
+'strategic alignment' which can be measured by:
+
+The reduction in costs achieved by organizational effectiveness as a result of the project
+The value added to INdT core technology competencies (compared to the cost if this was provided through external training)
+The contribution it makes to the 2011 objectives
+
+
+Checklist of questions
+
+1.	What are you trying to measure? What is the real meaning of the alleged "intangible?" 
+2.	Why do you care -- what's the decision and where is the "threshold?" 
+3.	How much do you know now -- what ranges or probabilities represent your uncertainty about this? 
+4.	What is the value of the information? What are the consequences of being wrong and the chance of being wrong, and what, if any, measurement effort would be justified? 
+5.	Within a cost justified by the information value, which observations would confirm or eliminate different possibilities? For each possible scenario, what is the simplest thing we should see if that scenario were true? 
+6.	How do you conduct the measurement that accounts for various types of avoidable errors (again, where the cost is less than the value of the information)? 
+
+In a conventional analysis, a subject matter expert (SME) is identified for each key variable. Then, a skilled interviewer carefully elicits the SME's judgment through an interview process. Our tool is different - people familiar with the type of project are assembled and asked to do an scrum estimate. Before this they are given calibration training. Basically, being "calibrated" means that one can consistently provide judgments of 90% confidence intervals that avoid the "overconfidence" bias. 
+
+
+./juiz.py 0.045 -1250 1600 1600 1600 1600 1600 1600 1600 1250
+----------------------------------------------------------------------
+year            0       1           2        3        4        5        6         7     
+cashflow  -1,250  1,600  1,600  1,600  1,600  1,600  1,600  1,600 
+
+Discount Rate: 4.5%
+Remaining Expenses: 1250.0
+
+    IRR: 127.60%
+    NPV: 8,178
+    IE: 6.5426572037
+
+==> Approve this opportunity which has a one time fixed cost of 1,250
+----------------------------------------------------------------------
+
+Mobile Deck ->
+
+./juiz.py 0.045 -424800 -424800 216350.42 461533.74 730474.13 1078688.03 1054474.13 1640668.03 1299600
+----------------------------------------------------------------------
+year                0         1              2            3           4             5              6             7         
+cashflow  -424,800  -424,800  216,350  461,533  730,474  1,078,688  1,054,474  1,640,668 
+
+Discount Rate: 4.5%
+Remaining Expenses: 1299600.0
+
+    IRR: 19.52%
+    NPV: 3,264,729
+    IE: 2.51210317527
+
+==> Approve this opportunity which has a one time fixed cost of 424,800
+----------------------------------------------------------------------

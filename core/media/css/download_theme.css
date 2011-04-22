@@ -1,0 +1,73 @@
+/*----------------------------------------------------------------------------------------------------------*/
+/* PÁGINA: DOWNLOAD THEME                                                                                   */
+/*----------------------------------------------------------------------------------------------------------*/
+
+#downloadContent{
+	
+	margin: 0px 0px 0px 0px;
+	padding-top:30px;
+	width: 778px;
+	background-color:#e8eaec;
+
+}
+#downloadContentBox{
+	
+	width: 698px;
+	margin: 0px 0px 0px 40px;
+	padding-bottom:30px;
+	background-color:#e8eaec;	
+	
+
+}
+
+.download_box {
+	
+	width:224px;
+	float:left;
+	margin-bottom:10px;
+}
+
+.download_box2 {
+	
+	width:224px;
+	margin-left:10px;
+	margin-bottom:-60px;
+	float:left;
+	
+}
+
+.download_box_tittle {
+	
+	text-align:left;
+	padding-bottom:10PX;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight:bolder;
+	font-size:16px;
+	color: #6d7381;
+}
+
+.download_box_top {
+	
+	padding-left:16.5px;
+	padding-top:15px;
+	height:192px;
+	width:207.5px;
+	background-image: url(/media/images/download_theme_top.jpg);
+	text-align:left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color: #374050;
+}
+
+.download_box_center {
+	
+	padding-left:16.5px;
+	padding-top:10px;
+	padding-bottom:10px;
+	background-image: url(/media/images/download_theme_center.jpg);
+	background-repeat:repeat-y;
+	text-align:left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #374050;
+}

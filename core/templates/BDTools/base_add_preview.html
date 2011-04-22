@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<div id="container">
+  <div id="internalContent">
+    <div id="internalContentBox" align="center">
+      <div id="internal_content_box"> 
+<table>
+{% if query %}
+   <b>Project Name:</b> {{query.project_name}}<br>
+        <b>Project Description:</b> {{query.project_description}}<br>
+        <b>The value added to INdT's customers or Nokia's consumers:</b><br> {{query.value_proposal_and_objective }}<br>
+        <b>The benefits to Nokia, INdT, Partners , Government:</b><br> {{query.benefits}}<br>
+        <b>Describe the problems addressed and general field of this technology:</b><br> {{query.problem}}<br>
+        <b>The technology or solution presented is:</b><br> {{query.deliverables }}<br>
+        <b>The knowledge-creation and knowledge-combination aspects of the project are:</b><br> {{query.innovative }}<br>
+        <b>Indicate key strategy elements to which project contributes:</b><br> {{query.application_strategic_contribution }}<br>
+        <b>What does this application contribute to competency building?:</b><br> {{query.competence_building }}<br>
+        <b>Does the application resulting technology or solution opens new, significant markets for INdT's customers or Nokia's consumers</b><br> {{query.market_attractiveness }}<br>
+        <b>Does the application resulting technology or solution has potential to leverage INdT/Nokia's competitive position:</b> {{query.competitiveness}}<br>
+        <b>The resulting solution or technology has a span of possible applications which is:</b> {{query.technology_attractiveness}}<br>
+        <b>The technology/solution is subject to:</b> {{query.appropriability}}<br>
+        <b>What are the biggest project rocks, from the technological perspective?:</b> {{query.technological_feasibility}}<br>
+        <b>Estimation of the needed resources (in high level) for the development of your idea (RH, schedule, equipment, hardware:</b> {{query.cost}}<br>
+        <b>Name of the experts involved. Their innovation area, technology specialist or stream manager:</b> {{query.experts_recommendation}}<br>  
+{% endif %}
+</table>
+<form method="POST" action="">{% csrf_token %}
+<table align="center">
+conflict='Null',innovation='Null',quality='Null',strategic='Null',competency='Null',markets='Null',leverage='Null',span='Null',ipr='Null',feasability='Null',cost='Null',remaining_cost='Null'
+
+</table>
+<p><input type="submit" /> | <a href="javascript:window.close()">Cancel</a></p>
+</form>
+   
+       <!---    <form  method="POST"  enctype="multipart/form-data" action="" name="UploadForm"> 
+             Give a name for your project:<br>
+      <input  name="the_project_name" type="text" id="id_the_project_name" maxlength="18" /> <br>
+      <input  name="related_assumptions" type="text" id="id_related_assumptions" /> <br>
+      <div id="button0"> 
+<INPUT TYPE="image" src="/media/images/btn_preview.jpg" width="194" height="42"  border="0" ALT="Submit Form">
+ </div>
+        </form>--->
+      
+       
+         <br><br>    
+      <div class="alignClear"></div>
+      
+
+        <div class="alignClear"></div>
+      </div>
+    
+      <div id="buttons">
+                <div id="button1"><a href="../">Back</a>
+                </div>
+        <div id="button2"></div>
+      	<div class="alignClear"></div>
+
+      </div>
+      <div class="alignClear"></div>
+       
+      
+      <div class="alignClear"></div>
+        </div>
+  </div>
+  
+      {% endblock %}

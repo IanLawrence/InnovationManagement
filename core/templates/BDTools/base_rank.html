@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+  
+<div id="container">
+
+  <div id="internalContent">
+    <div id="internalContentBox" align="center">
+   
+      <div id="internal_content_box"> 
+   
+           
+  
+        {% if projects %}
+        {% for project in projects %}
+        <b><a href="/browse/{{project.business_case.id}}">{{project.business_case}}</a></b> was given a score of <b>{{project.ie|floatformat:3}}</b>. It was last assessed by <b>{{ project.user }}</b> on {{project.date_created}} <BR>
+        {% endfor %}
+         {% else %}
+          No projects available
+          {% endif %}
+      
+       
+         <br><br>    
+      <div class="alignClear"></div>
+      
+
+        <div class="alignClear"></div>
+      </div>
+    
+      <div id="buttons">
+                <div id="button1"><a href="../">Back</a>
+                </div>
+        <div id="button2"></div>
+      	<div class="alignClear"></div>
+
+      </div>
+      <div class="alignClear"></div>
+       
+      
+      <div class="alignClear"></div>
+        </div>
+  </div>
+  
+      {% endblock %}

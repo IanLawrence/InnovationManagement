@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+  
+<div id="container">
+
+  <div id="internalContent">
+    <div id="internalContentBox" align="center">
+   
+      <div id="internal_content_box"> 
+<p>Stage Gate  {{ step }} of {{ step_count }}</p>
+
+
+<table width="698" border="0" cellspacing="0" cellpadding="1" align="left" height="100">
+        <tr valign="middle"> 
+          <td bgcolor="#5f6778" width="400" height="20"> 
+            <div align="center"><font color="#FFFFFF"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Project Details</font></b></font> </div>
+          </td>
+          <td width="4" height="20"></td>
+          <td bgcolor="#5f6778" width="250" height="20"> 
+            <div align="center"><font color="#FFFFFF"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Assessment</font></b></font></div>
+          </td>
+        </tr>
+        <tr valign="top"> 
+          <td bgcolor="#31363c" width="120"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="3" height="80">
+        <b>Project Name:</b> {{browsing.project_name}}<br>
+        <b>Project Description:</b> {{browsing.project_description}}<br>
+        <b>The value added to INdT's customers or Nokia's consumers:</b><br> {{browsing.value_proposal_and_objective }}<br>
+        <b>The benefits to Nokia, INdT, Partners , Government:</b><br> {{browsing.benefits}}<br>
+        <b>Describe the problems addressed and general field of this technology:</b><br> {{browsing.problem}}<br>
+        <b>The technology or solution presented is:</b><br> {{browsing.deliverables }}<br>
+        <b>The knowledge-creation and knowledge-combination aspects of the project are:</b><br> {{browsing.innovative }}<br>
+        <b>Indicate key strategy elements to which project contributes:</b><br> {{browsing.application_strategic_contribution }}<br>
+        <b>What does this application contribute to competency building?:</b><br> {{browsing.competence_building }}<br>
+        <b>Does the application resulting technology or solution opens new, significant markets for INdT's customers or Nokia's consumers</b><br> {{browsing.market_attractiveness }}<br>
+        <b>Does the application resulting technology or solution has potential to leverage INdT/Nokia's competitive position:</b> {{browsing.competitiveness}}<br>
+        <b>The resulting solution or technology has a span of possible applications which is:</b> {{browsing.technology_attractiveness}}<br>
+        <b>The technology/solution is subject to:</b> {{browsing.appropriability}}<br>
+        <b>What are the biggest project rocks, from the technological perspective?:</b> {{browsing.technological_feasibility}}<br>
+        <b>Estimation of the needed resources (in high level) for the development of your idea (RH, schedule, equipment, hardware:</b> {{browsing.cost}}<br>
+        <b>Name of the experts involved. Their innovation area, technology specialist or stream manager:</b> {{browsing.experts_recommendation}}<br> 
+            </table>
+          </td>
+          <td width="4"></td>
+          <td bgcolor="#31363c" width="120"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="3" height="80">
+              <tr bgcolor="#FFFFFF" valign="top"> 
+                <td> 
+              
+                 <form action='.' method='POST'>{% csrf_token %}
+                  {% if step == 1 %}
+                      {{ form.non_field_errors }}
+
+                          <table bgcolor="#31363c"> 
+                           {{form}}
+                          </table>
+
+                  {% endif %}
+   
+
+                  {% if step == 2 %}
+                    
+
+                <table bgcolor="#31363c">     
+              {{form}}
+                 </table>
+
+
+
+
+
+
+
+
+
+                  {% endif %}
+
+
+   
+
+
+                     <input type="hidden" name="{{ step_field }}" value="{{ step0 }}" />
+                     <input type="hidden" name="business_case_id" value="{{browsing.id}}" />
+                  {{ previous_fields|safe }}
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" value="Submit Assessment" />
+                 </form>
+                    
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+ 
+
+
+ 
+         <br><br>    
+      <div class="alignClear"></div>
+      
+
+        <div class="alignClear"></div>
+      </div>
+    
+      <div id="buttons">
+             
+        <div id="button2"></div>
+      	<div class="alignClear"></div>
+
+      </div>
+      <div class="alignClear"></div>
+       
+      
+      <div class="alignClear"></div>
+        </div>
+  </div>
+  
+      {% endblock %}
+
+

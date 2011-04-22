@@ -1,0 +1,7 @@
+from PortfolioManagement.BDTools.models import BusinessPotential,BusinessCase, BusinessModel, BusinessPlan
+from django.contrib import admin
+
+admin.site.register(BusinessPotential)
+admin.site.register(BusinessCase)
+admin.site.register(BusinessModel)
+admin.site.register(BusinessPlan)

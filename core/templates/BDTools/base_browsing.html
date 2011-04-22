@@ -1,0 +1,102 @@
+{% extends "base.html" %}
+{% block extrahead %}
+<script type="text/javascript" src="/media/js/admin/RelatedObjectLookups.js"></script>
+
+
+<style>
+td {word-break:break-all}
+</style> 
+
+{% load innovation_extras %}
+
+
+{% endblock %}
+
+{% block content %}
+  
+  
+<div id="container">
+
+  <div id="internalContent">
+    <div id="internalContentBox" align="center">
+
+      <div id="internal_content_box"> 
+      
+    {% if browsing %}
+        <table width="698">
+        <tr><td width='698'>
+        <b>Project Name:</b> {{browsing.project_name|split}}
+        </td></tr>
+        <tr><td width='698'>
+        <b>Project Description:</b><br>{{browsing.project_description|split}}
+        </td></tr>
+        <tr><td width='698'>
+        <b>The value added to INdT's customers or Nokia's consumers:</b><br>{{browsing.value_proposal_and_objective|split }}
+        </td></tr>
+        <tr><td width='698'>
+        <b>The benefits to Nokia, INdT, Partners , Government:</b><br> {{browsing.benefits|split}}
+        </td></tr>
+        <tr><td>
+        <b>Describe the problems addressed and general field of this technology:</b><br> {{browsing.problem|split}}
+        </td></tr>
+        <tr><td width='698'>
+        <b>The technology or solution presented is:</b><br> {{browsing.deliverables|split}}
+        </td></tr>
+        <tr><td width='698'>
+        <b>The knowledge-creation and knowledge-combination aspects of the project are:</b><br> {{browsing.innovative|split }}
+        </td></tr>
+        <tr><td width='698'>
+        <b>Indicate key strategy elements to which project contributes:</b><br> {{browsing.application_strategic_contribution|split }}
+        </td></tr>
+        <tr><td width='698'>
+        <b>What does this application contribute to competency building?:</b><br> {{browsing.competence_building|split }}
+        </td></tr>
+        <tr><td width='698'>
+        <b>Does the projec open new, significant markets for INdT or Nokia's consumers</b><br> {{browsing.market_attractiveness|split}}
+        </td></tr>
+        <tr><td width='698'>
+        <b>Does the projects resulting technology have potential to leverage INdT/Nokia's competitive position:</b><br> {{browsing.competitiveness|split}}
+        </td></tr>
+        <tr><td width='698'>
+        <b>The projects resulting technology has a span of possible applications which is:</b><br> {{browsing.technology_attractiveness|split}}
+        </td></tr>
+        <tr><td width='698'>
+        <b>The technology/solution is subject to:</b><br> {{browsing.appropriability|split}}
+        </td></tr>
+        <tr><td width='698'>
+        <b>What are the biggest project rocks, from the technological perspective?:</b> {{browsing.technological_feasibility|split}}
+        </td></tr>
+        <tr><td width='698'>
+        <b>Estimation of the needed resources (in high level) for the development of your idea (RH, schedule, equipment, hardware:</b><br> {{browsing.cost|split}}
+        </td></tr>
+        <tr><td width='698'>
+        <b>Name of the experts involved. Their innovation area, technology specialist or stream manager:</b><br> {{browsing.experts_recommendation|split}}
+        </td></tr>
+        </table>
+        <br><br>
+        <a href="/spreadsheet/{{browsing.id}}">Assess this project</a>
+    {% else %}
+    <p>Either there are no projects available or you don't have permission to browse them.</p>
+    {% endif %}
+         <br><br>    
+      <div class="alignClear"></div>
+      
+
+        <div class="alignClear"></div>
+      </div>
+    
+      <div id="buttons">
+              <div id="button1"><a href="../">Back</a>
+                </div>
+        <div id="button2"></div>
+      	<div class="alignClear"></div>
+           
+      </div>
+      <div class="alignClear"></div>
+       
+      
+      <div class="alignClear"></div>
+        </div>
+  </div>
+  
+      {% endblock %}

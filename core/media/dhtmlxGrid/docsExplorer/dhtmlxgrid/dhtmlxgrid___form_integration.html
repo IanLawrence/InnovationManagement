@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en" dir="ltr">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" href="../codebase/default.css" type="text/css" media="screen" title="no title" charset="utf-8"><title>
+    dhtmlxgrid:form_integration    [Skin test wiki]
+  </title></head>
+
+<body>
+<div class="dokuwiki">
+  
+  <div class="stylehead">
+
+    <div class="header">
+    <a class="logo" href="http://dhtmlx.com" title="DHTMLX Documentation homepage"></a>
+    <span class="tittle-dhtmlx">DHTMLX Docs & Samples Explorer</span>
+
+    <div class="search-field">
+        <form action="http://dhtmlx.com/dhxdocs/doku.php" accept-charset="utf-8" id="dw__search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" title="Search" /><button type="submit"></button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>    </div>
+        <div class="buttons">
+                <a class="doc"></a>
+                <a title="DHTMLX Samples homepage" href="../samples.html" class="sample"/></a>
+        </div>
+     <!-- <div class="pagename">
+        [[<a href="#"  title="Backlinks">dhtmlxgrid:form_integration</a>]]
+      </div>
+      <div class="logo">
+        <a href="/dhtmlx/_lab/wiki/doku.php"  name="dokuwiki__top" id="dokuwiki__top" accesskey="h" title="[H]">Skin test wiki</a>      </div>
+
+      <div class="clearer"></div>-->
+        
+    </div>
+
+    
+<!--   <div class="bar" id="bar__top">
+      <div class="bar-left" id="bar__topleft">
+                <form class="button btn_revs" method="get" action="http://dhtmlx.com/dhxdocs/doku.php"><div class="no"><input type="hidden" name="do" value="revisions" /><input type="hidden" name="id" value="dhtmlxgrid:form_integration" /><input type="submit" value="Old revisions" class="button" accesskey="o" title="Old revisions [O]" /></div></form>      </div>
+
+      <div class="bar-right" id="bar__topright">
+        <form class="button btn_recent" method="get" action="http://dhtmlx.com/dhxdocs/doku.php"><div class="no"><input type="hidden" name="do" value="recent" /><input type="hidden" name="id" value="dhtmlxgrid:form_integration" /><input type="submit" value="Recent changes" class="button" accesskey="r" title="Recent changes [R]" /></div></form>        <form action="http://dhtmlx.com/dhxdocs/doku.php" accept-charset="utf-8" id="dw__search"><div class="no"><input type="hidden" name="do" value="search" /><input type="text" id="qsearch__in" accesskey="f" name="id" title="Search" /><button type="submit"></button><div id="qsearch__out" class="ajax_qsearch JSpopup"></div></div></form>&nbsp;
+      </div>
+
+      <div class="clearer"></div>
+    </div> -->
+
+<!--        <div class="breadcrumbs">
+      <span class="bchead">Trace:</span> <span class="bcsep">&raquo;</span> <span class="curid"><a href="/dhtmlx/_lab/wiki/doku.php?id=dhtmlxgrid:form_integration"  class="breadcrumbs" title="dhtmlxgrid:form_integration">form_integration</a></span>    </div>
+    -->
+
+    
+  </div>
+  
+  
+  <div class="page">
+    <!-- wikipage start -->
+    <!-- TOC START -->
+<div class="toc">
+<div class="tocheader toctoggle" id="toc__header">Table of Contents</div>
+<div id="toc__inside">
+
+<ul class="toc">
+<li class="clear">
+
+<ul class="toc">
+<li class="level2"><div class="li"><span class="li"><a href="#form_integration" class="toc">Form Integration</a></span></div>
+<ul class="toc">
+<li class="level3"><div class="li"><span class="li"><a href="#submit_modes" class="toc">Submit Modes</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#submit_only_the_changed_rows" class="toc">&quot;Submit Only the Changed Rows&quot;</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#submit_all_rows_mode" class="toc">&quot;Submit All Rows&quot; Mode</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#submit_ids_of_the_selected_rows_mode" class="toc">&quot;Submit IDs of the Selected Rows&quot; Mode</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#submit_values_from_the_selected_rows_mode" class="toc">&quot;Submit Values from the Selected Rows&quot; Mode</a></span></div></li>
+<li class="level3"><div class="li"><span class="li"><a href="#some_additional_details" class="toc">Some Additional Details</a></span></div></li></ul>
+</li></ul>
+</li></ul>
+</div>
+</div>
+<!-- TOC END -->
+
+<p>
+<div class='backlinks'><div class='backlink last_backlink'><img src="icons___file.gif"  class="media" alt="" /><a href="../index.html" class="wikilink1" title="start">Index</a></div><div class='arrow'></div><div class='backlink last_backlink'><img src="icons___grid.gif"  class="media" alt="" /><a href="index.html" class="wikilink1" title="dhtmlxgrid:toc">dhtmlxgrid</a></div><div class='arrow'></div><div class='backlink'><span class="curid"><a href="dhtmlxgrid___form_integration.html" class="wikilink1" title="dhtmlxgrid:form_integration"> Form Integration </a></span></div></div>
+
+</p>
+
+<h2><a name="form_integration" id="form_integration">Form Integration</a></h2>
+<div class="level2">
+
+<p>
+dhtmlxGrid can integrate with a surrounding FORM - which means grid data will be sent as a part of form submitting (this functionality can be used to save changes in the grid, if you do not want to use dataprocessor library).
+</p>
+
+<p>
+To enable form integration you need:
+</p>
+<ul>
+<li class="level1"><div class="li">  Include ext/dhtmlxgrid_form.js;</div>
+</li>
+<li class="level1"><div class="li">  Place grid&#039;s container inside the FORM tag.</div>
+</li>
+</ul>
+
+<p>
+That is all, no additional steps are to be taken.
+</p>
+
+</div>
+
+<h3><a name="submit_modes" id="submit_modes">Submit Modes</a></h3>
+<div class="level3">
+
+<p>
+Grid can work in the following modes:
+</p>
+<ul>
+<li class="level1"><div class="li">  Submit only the changed rows (the default mode);</div>
+</li>
+<li class="level1"><div class="li">  Submit all rows;</div>
+</li>
+<li class="level1"><div class="li">  Submit ID&#039;s of the selected rows;</div>
+</li>
+<li class="level1"><div class="li">  Submit values of the selected rows.</div>
+</li>
+</ul>
+
+</div>
+
+<h3><a name="submit_only_the_changed_rows" id="submit_only_the_changed_rows">&quot;Submit Only the Changed Rows&quot;</a></h3>
+<div class="level3">
+
+<p>
+Submit only the changed rows is the default mode. In this mode the grid will include only the data of the changed rows in the process of form submitting.
+</p>
+
+<p>
+For each changed row a virtual input field will be added:<br/>
+
+The name of the field is [GRIDID]_[ROWID]_[CELLINDEX]<br/>
+
+where
+
+</p>
+<ul>
+<li class="level1"><div class="li">  GRIDID - id of the container used for the grid;</div>
+</li>
+<li class="level1"><div class="li">  ROWID - id of the row in which a value was changed;</div>
+</li>
+<li class="level1"><div class="li">  CELLINDEX - the index of a cell inside the row.</div>
+</li>
+</ul>
+
+<p>
+
+The value of the field is equal to the cell value.
+</p>
+
+<p>
+For example, if we have a grid similar to the following one:
+
+</p>
+<pre class="code javascript">      <span class="kw2">var</span> grid <span class="sy0">=</span> <span class="kw2">new</span> dhtmlXGridObject<span class="br0">&#40;</span><span class="st0">&quot;gridbox&quot;</span><span class="br0">&#41;</span>
+      ...
+      <span class="me1">grid</span>.<a href='dhtmlxgrid___api_method_dhtmlxgridobject_addrow.html'><b><span class="me1">addRow</span></b></a><span class="br0">&#40;</span><span class="st0">&quot;r1&quot;</span><span class="sy0">,</span><span class="br0">&#91;</span><span class="st0">&quot;first&quot;</span><span class="sy0">,</span><span class="st0">&quot;second&quot;</span><span class="sy0">,</span><span class="st0">&quot;third&quot;</span><span class="br0">&#93;</span><span class="br0">&#41;</span></pre>
+<p>
+
+And later change the “second” to the “new second” and submit a form, it will have a
+</p>
+
+<p>
+gridbox_r1_1=“new second”
+</p>
+
+<p>
+If any row was added to the grid, all values of this new row will be marked as changed. Additional to it the<br/>
+
+[GRIDID]_ROWS_ADDED<br/>
+
+virtual input will be added. It will contain the list of IDs of the added rows (so on the server side it will be possible to separate added and updated rows).
+</p>
+
+<p>
+If any row was deleted, the<br/>
+
+[GRIDID]_ROWS_DELETED<br/>
+
+virtual input will be added. The same as for the added rows, it will contain the list of IDs of the deleted rows.
+</p>
+
+<p>
+Sending the information about added|deleted rows is enabled by default, but can be disabled in the following way:
+
+</p>
+<pre class="code javascript">      grid.<a href='dhtmlxgrid___api_method_dhtmlxgridobject_submitaddedrows.html'><b><span class="me1">submitAddedRows</span></b></a><span class="br0">&#40;</span><span class="kw2">false</span><span class="br0">&#41;</span>;</pre>
+</div>
+
+<h3><a name="submit_all_rows_mode" id="submit_all_rows_mode">&quot;Submit All Rows&quot; Mode</a></h3>
+<div class="level3">
+
+<p>
+It is a mode that is not going to be used quite often, in my opinion. It can be enabled by:
+
+</p>
+<pre class="code javascript">      grid.<a href='dhtmlxgrid___api_method_dhtmlxgridobject_submitonlychanged.html'><b><span class="me1">submitOnlyChanged</span></b></a><span class="br0">&#40;</span><span class="kw2">false</span><span class="br0">&#41;</span>;</pre>
+<p>
+
+In this mode a virtual input field for each cell will be created in the grid .
+</p>
+
+</div>
+
+<h3><a name="submit_ids_of_the_selected_rows_mode" id="submit_ids_of_the_selected_rows_mode">&quot;Submit IDs of the Selected Rows&quot; Mode</a></h3>
+<div class="level3">
+
+<p>
+In this mode the grid will create a single virtual field:
+[GRIDID]_SELECTED
+This field will contain a list of row IDs which are selected (in the single select mode - it will be a single ID).
+The mode can be enabled by:
+
+</p>
+<pre class="code javascript">      grid.<a href='dhtmlxgrid___api_method_dhtmlxgridobject_submitonlyselected.html'><b><span class="me1">submitOnlySelected</span></b></a><span class="br0">&#40;</span><span class="kw2">true</span><span class="br0">&#41;</span>
+      grid.<a href='dhtmlxgrid___api_method_dhtmlxgridobject_submitonlyrowid.html'><b><span class="me1">submitOnlyRowID</span></b></a><span class="br0">&#40;</span><span class="kw2">true</span><span class="br0">&#41;</span>;</pre>
+</div>
+
+<h3><a name="submit_values_from_the_selected_rows_mode" id="submit_values_from_the_selected_rows_mode">&quot;Submit Values from the Selected Rows&quot; Mode</a></h3>
+<div class="level3">
+
+<p>
+This mode works almost in the same way as the default mode. This mode will send updated values from the selected rows only:
+
+</p>
+<pre class="code javascript">      grid.<a href='dhtmlxgrid___api_method_dhtmlxgridobject_submitonlyselected.html'><b><span class="me1">submitOnlySelected</span></b></a><span class="br0">&#40;</span><span class="kw2">true</span><span class="br0">&#41;</span>;
+      grid.<a href='dhtmlxgrid___api_method_dhtmlxgridobject_submitonlyrowid.html'><b><span class="me1">submitOnlyRowID</span></b></a><span class="br0">&#40;</span><span class="kw2">false</span><span class="br0">&#41;</span>;</pre>
+</div>
+
+<h3><a name="some_additional_details" id="some_additional_details">Some Additional Details</a></h3>
+<div class="level3">
+<ol>
+<li class="level1"><div class="li"> As the names of fields contain gridId you can include multiple grids inside one and the same form tag.</div>
+</li>
+<li class="level1"><div class="li"> Pay your attention to the fact that only the rows edited by a user will be marked as changed. If you change some value by <acronym title="Application Programming Interface">API</acronym> calls, such row will not be included in the process of form submitting.</div>
+</li>
+</ol>
+
+<p>
+
+You can mark any row in the grid as updated in the following way:
+
+</p>
+<pre class="code javascript">      grid.<a href='dhtmlxgrid___api_method_dhtmlxgridobject_cells.html'><b><span class="me1">cells</span></b></a><span class="br0">&#40;</span>i<span class="sy0">,</span>j<span class="br0">&#41;</span>.<span class="me1">cell</span>.<span class="me1">wasChanged</span><span class="sy0">=</span><span class="kw2">true</span>;</pre>
+</div>
+
+    <!-- wikipage stop -->
+  </div>
+
+  <div class="clearer">&nbsp;</div>
+
+  
+  <div class="stylefoot">
+
+    <div class="meta">
+      <div class="user">
+              </div>
+     <!-- <div class="doc">
+        dhtmlxgrid/form_integration.txt &middot; Last modified: 2009/07/30 12:56 (external edit)      </div>
+    </div>-->
+
+   
+    <!--<div class="bar" id="bar__bottom">-->
+      <!--<div class="bar-left" id="bar__bottomleft">-->
+        <!---->
+        <!--<form class="button btn_revs" method="get" action="http://dhtmlx.com/dhxdocs/doku.php"><div class="no"><input type="hidden" name="do" value="revisions" /><input type="hidden" name="id" value="dhtmlxgrid:form_integration" /><input type="submit" value="Old revisions" class="button" accesskey="o" title="Old revisions [O]" /></div></form>-->
+      <!--</div>-->
+      <!--<div class="bar-right" id="bar__bottomright">-->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!--<form class="button btn_login" method="get" action="http://dhtmlx.com/dhxdocs/doku.php"><div class="no"><input type="hidden" name="do" value="login" /><input type="hidden" name="sectok" value="9a61d3dc1d31063eb0b9fbb78128fd66" /><input type="hidden" name="id" value="dhtmlxgrid:form_integration" /><input type="submit" value="Login" class="button" title="Login" /></div></form>-->
+        <!--<form class="button btn_index" method="get" action="http://dhtmlx.com/dhxdocs/doku.php"><div class="no"><input type="hidden" name="do" value="index" /><input type="hidden" name="id" value="dhtmlxgrid:form_integration" /><input type="submit" value="Index" class="button" accesskey="x" title="Index [X]" /></div></form>-->
+        <!--<a class="nolink" href="#dokuwiki__top"><input type="button" class="button" value="Back to top" onclick="window.scrollTo(0, 0)" title="Back to top" /></a>&nbsp;-->
+      <!--</div>-->
+      <!--<div class="clearer"></div>-->
+    <!--</div>-->
+
+  </div>
+
+  
+
+</div>
+
+<div class="footerinc">
+
+
+</div>
+
+<div class="no"><img src="/dhtmlx/_lab/wiki/lib/exe/indexer.php?id=dhtmlxgrid%3Aform_integration&amp;1257950194" width="1" height="1" alt=""  /></div>
+     <div class="footer">
+        <div class="footer-logo"></div>
+        <div class="copyright">Copyright © 1998-2009 DHTMLX LTD.<br />All rights reserved.</div>
+            	    </div>
+</body>
+</html>

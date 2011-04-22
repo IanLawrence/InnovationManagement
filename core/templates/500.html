@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+<title>Canola Theme Maker</title>
+<link href="/media/css/canola.css" rel="stylesheet" type="text/css" >
+</head>
+
+<body>
+
+<div id="container">
+
+	<div id="header">
+    	<a href="/"><img class="alignLeft" src="/media/images/top_home.jpg"></a>
+
+        <div class="alignClear"></div>
+    </div>	
+    
+    <div id="internalContent">
+          <div id="internalContentBox" align="center">
+       	    <b>Server error</b>
+            <div id="content_box_terms"><br><br>
+              <p>Ack. Something went wrong and has been logged.</div>
+         	  <div id="footer_box_terms">
+              		
+              </div> 
+       	    <div class="alignClear"></div>
+          </div>
+
+      
+    </div>  
+      <div id="footer">
+<div id="footer_copyright">Innovation Tools is a project brought to you by <a href="http://www.indt.org.br" target="_blank">INdT</a></div>
+<div id="footer_menu"><a href="/">HOME</a> |  <a href="/about">ABOUT</a>  |  <a href="/credits">CREDITS</a>  |  <a href="/terms">TERMS OF USE</a> |  <a 
+href="/admin">ADMIN</a>  {% if user.is_authenticated %} | User: {{ user.username }}{% endif %}
+</div>
+
+<div class="alignClear"></div>
+<br><br>
+</div>
+<div class="alignClear"></div>
+</div>
+    
+</div>
+</body>
+</html>
+

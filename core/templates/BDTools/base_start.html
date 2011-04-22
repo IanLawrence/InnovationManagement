@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<!--- the container for the site --->
+<div id="container"> 
+<div id="mainContentHome"> 
+<div id="homeContent" align="center"> 
+ 
+<div id="top_box"><img src="/media/images/home_top_box_pm.jpg" width=
+"699" height="191" alt="ian"></div> 
+<div id="content_box"> 
+<div id="content_box1"> 
+<p>Please evaluate the proposals which are relevant to your subject area expertise here.<br><br><br> 
+<strong>Login is required!</strong> 
+</p> 
+<br></div> 
+<div id="content_box2"> 
+<br> 
+<br>Please submit your innovative proposal here.<br><br>
+<br></div> 
+<div id="content_box3"> 
+See the ranked proposals here.<br><br><br><br><br>  
+<br> 
+</p> 
+<br></div> 
+<div class="alignClear"></div> 
+</div> 
+<div id="footer_box"><img src="/media/images/home_footer_box.jpg"
+width="699" height="66" border="0" usemap="#Map" alt=
+"home top box"></div> 
+</div> 
+<div class="alignClear"></div> 
+</div> 
+ 
+<map name="Map" id="Map"> 
+<area shape="rect" coords="32,7,212,40" href="browse/" alt="Evaluate project" /> 
+<area shape="rect" coords="255,6,441,40" href="add/" alt="Add a Project"> 
+<area shape="rect" coords="489,5,675,39" href="rank/" alt="Rankings"> 
+</map> 
+{% endblock %}
+
+

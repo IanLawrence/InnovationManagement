@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+
+{% block content %}
+  
+{% load innovation_extras %}
+  
+<div id="containerform">
+
+  <div id="internalContentform">
+    <div id="internalContentBoxform" align="center">
+   
+      <div id="internal_content_box"> 
+<p>Stage Gate  {{ step }} of {{ step_count }}</p>
+
+
+<table width="1150" border="0" cellspacing="0" cellpadding="1" align="left" height="100">
+        <tr valign="middle"> 
+          <td bgcolor="#5f6778" width="400" height="20"> 
+            <div align="center"><font color="#FFFFFF"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Project Details</font></b></font> </div>
+          </td>
+          <td width="4" height="20"></td>
+          <td bgcolor="#5f6778" width="250" height="20"> 
+            <div align="center"><font color="#FFFFFF"><b><font face="Verdana, Arial, Helvetica, sans-serif" size="2">Assessment</font></b></font></div>
+          </td>
+        </tr>
+        <tr valign="top"> 
+          <td bgcolor="#31363c" width="120"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="3" height="80">
+        <b>Project Name:</b> {{browsing.project_name|split}}<br>
+        <b>Project Description:</b> {{browsing.project_description|split}}<br>
+        <b>The value added to INdT's customers or Nokia's consumers:</b><br> {{browsing.value_proposal_and_objective|split }}<br>
+        <b>The benefits to Nokia, INdT, Partners , Government:</b><br> {{browsing.benefits|split}}<br>
+        <b>Describe the problems addressed and general field of this technology:</b><br> {{browsing.problem|split}}<br>
+        <b>The technology or solution presented is:</b><br> {{browsing.deliverables|split }}<br>
+        <b>The knowledge-creation and knowledge-combination aspects of the project are:</b><br> {{browsing.innovative|split }}<br>
+        <b>Indicate key strategy elements to which project contributes:</b><br> {{browsing.application_strategic_contribution|split }}<br>
+        <b>What does this application contribute to competency building?:</b><br> {{browsing.competence_building|split }}<br>
+        <b>Does the application resulting technology or solution opens new, significant markets for INdT's customers or Nokia's consumers|split</b><br>{{browsing.market_attractiveness|split }}<br>
+        <b>Does the application resulting technology or solution has potential to leverage INdT/Nokia's competitive position:</b> {{browsing.competitiveness|split}}<br>
+        <b>The resulting solution or technology has a span of possible applications which is:</b> {{browsing.technology_attractiveness|split}}<br>
+        <b>The technology/solution is subject to:</b> {{browsing.appropriability|split}}<br>
+        <b>What are the biggest technological blockers?:</b> {{browsing.technological_feasibility|split}}<br>
+        <b>Estimation of the needed resources (in high level) for the development of your idea (RH, schedule, equipment, hardware:</b> {{browsing.cost|split}}<br>
+        <b>Name of the experts involved. Their innovation area, technology specialist or stream manager:</b> {{browsing.experts_recommendation|split}}<br> 
+            </table>
+          </td>
+          <td width="4"></td>
+          <td bgcolor="#31363c" width="120"> 
+            <table width="100%" border="0" cellspacing="0" cellpadding="3" height="80">
+              <tr bgcolor="#FFFFFF" valign="top"> 
+                <td> 
+              
+                 <form action='.' method='POST'>{% csrf_token %}
+                  {% if step == 1 %}
+                      {{ form.non_field_errors }}
+
+                          <table bgcolor="#31363c"> 
+                           {{form}}
+                          </table>
+
+                  {% endif %}
+   
+
+                  {% if step == 2 %}
+                    
+
+                <table bgcolor="#31363c">     
+              {{form}}
+                 </table>
+
+                  {% endif %}
+
+
+   
+
+
+                     <input type="hidden" name="{{ step_field }}" value="{{ step0 }}" />
+                     <input type="hidden" name="business_case_id" value="{{browsing.id}}" />
+                  {{ previous_fields|safe }}
+                  <div align="center"><input type="submit" value="Submit Assessment" /></div>
+                 </form>
+                    
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+
+ 
+
+
+ 
+         <br><br>    
+      <div class="alignClear"></div>
+      
+
+        <div class="alignClear"></div>
+      </div>
+    
+      <div id="buttons">
+             
+        <div id="button2"></div>
+      	<div class="alignClear"></div>
+
+      </div>
+      <div class="alignClear"></div>
+       
+      
+      <div class="alignClear"></div>
+        </div>
+  </div>
+  
+      {% endblock %}
+  {% block footer %}
+         
+         <div id="footerform">
+<div id="footer_copyright">Innovation Tools is a project brought to you by <a href="http://www.indt.org.br" target="_blank">INdT</a></div>
+<div id="footer_menu"><a href="/">HOME</a> |  <a href="/about">ABOUT</a>  |  <a href="/credits">CREDITS</a>  |  <a href="/terms">TERMS OF USE</a> |  <a href="/admin">ADMIN</a>  {% if user.is_authenticated %} | User: {{ user.username }}{% endif %}
+</div>
+
+<div class="alignClear"></div>
+<br><br>
+</div>
+<div class="alignClear"></div>
+</div>
+
+         
+         {% endblock %}
+
+

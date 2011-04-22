@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block extrahead %}
+<script type="text/javascript" src="/media/js/admin/RelatedObjectLookups.js"></script>
+{% endblock %}
+
+{% block content %}
+<div id="container">
+  <div id="internalContent">
+    <div id="internalContentBox" align="center">
+      <div id="internal_content_box"> 
+
+       {% if proj %}
+        <!---The IRR of this project is <b>{{proj.irr}}</b><br>
+        The NPV of this project is <b>{{proj.npv}}</b><br>-->
+        This project has been automatically assessed and it scored <b>{{proj.ie}}</b> points.<br>
+        
+{% else %}
+    <p>Analysis failed.</p>
+{% endif %} 
+       
+         <br><br>    
+      <div class="alignClear"></div>
+      
+
+        <div class="alignClear"></div>
+      </div>
+    
+      <div id="buttons">
+        <div id="button2"></div>
+      	<div class="alignClear"></div>
+
+      </div>
+      <div class="alignClear"></div>
+       
+      
+      <div class="alignClear"></div>
+        </div>
+  </div>
+  
+      {% endblock %}
+
+
+
