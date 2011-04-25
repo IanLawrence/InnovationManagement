@@ -15,35 +15,37 @@ The business case for social projects is therefore contingent on finding a suita
 So how should we deal with the problem of measuring the value of a social project? 
 This work starts from the premise that the value of a social project actually is measurable and that the reason it seems difficult is caused by a misunderstanding of what is actually being measured. Terms like goodwill or strategic alignment only seem to be immeasurable because they are ambiguously defined. This work will attempt to remove this type ambiguity by focusing on definitions that can be expressed in units of measurement. Once this is done a range of economic implements can then be used as tools in the decision making process.
 
-As an example -  the government might have to provide the service if the market were not to provide it - social projects can then be valued through the cost to the government if it had to provide the service. Other aspects relevant to valuing social projects are: 
 
-'goodwill' which can be measured by:
+Questions when submitting new projects
 
-The percentage of customers that will repeat business with <company> because of the project
-The percentage decrease in the number of complaints received by <company> because of the project
-The percentage of new customers gained by <company> because of the project
-The number of firms more likely to collaborate with <company> because of the project
-The value of the IPR the project might bring to <company>
-The value of the new skills and knowledge the project brings to employees of <company>
+Is value added to <company> consumers?
+What are the benefits to <company>  Partners or Governments?
+Describe the problems the project addresses and/or the general field of technology being explored?
+What are the final deliverables and what is innovative in your project?
+What are the knowledge-creation and knowledge-combination aspects of the project.
+Justify the strategy alignment of the application. Indicate key strategy elements to which the project contributes
+What is the proposed projects contribution to competency building?
+Does the proposed projects resulting technology or solution open new, significant markets for <company> consumers?
+Does the proposed projects resulting technology or solution have potential to leverage <company>  competitive position?
+The resulting solution or technology has a span of possible applications which is...?
+Is the technology/solution appropriate for <company> ?. Why?
+What are the biggest project blockers from a technological perspective?
+Please estimate the resources needed  (in a high level overview) for the development of your idea (Things like headcount, equipment, hardware etc)
+The Names of the people involved in this project. Their innovation area, technology speciality or stream manager
 
-'strategic alignment' which can be measured by:
+Questions wnen evaluating projects
 
-The reduction in costs achieved by organizational effectiveness as a result of the project
-The value added to <company> core technology competencies (compared to the cost if this was provided through external training)
-The contribution it makes to the strategic objectives
-
-
-Checklist of questions
-
-1.	What are you trying to measure? What is the real meaning of the alleged "intangible?" 
-2.	Why do you care -- what's the decision and where is the "threshold?" 
-3.	How much do you know now -- what ranges or probabilities represent your uncertainty about this? 
-4.	What is the value of the information? What are the consequences of being wrong and the chance of being wrong, and what, if any, measurement effort would be justified? 
-5.	Within a cost justified by the information value, which observations would confirm or eliminate different possibilities? For each possible scenario, what is the simplest thing we should see if that scenario were true? 
-6.	How do you conduct the measurement that accounts for various types of avoidable errors (again, where the cost is less than the value of the information)? 
-
-In a conventional analysis, a subject matter expert (SME) is identified for each key variable. Then, a skilled interviewer carefully elicits the SME's judgment through an interview process. Our tool is different - people familiar with the type of project are assembled and asked to do an scrum estimate. Before this they are given calibration training. Basically, being "calibrated" means that one can consistently provide judgments of 90% confidence intervals that avoid the "overconfidence" bias. (This has been substituted in this version on github bya SME answering a series of questions about the merit of the project)
-
+What is the quality of information presented.?
+How much does this project align with <company> strategy?
+What is the probability that the project will build competencies?
+The project opens new, significant markets for <company> customers (What is the potential for market and revenue creation?)
+What is the project's capacity to leverage <company> competitive position (Impact on competition)
+If the project is approved what is the span of possible applications that the resulting product might be applied to?
+Are there any IPR implications?
+What is the technological feasibility of the project?
+Assuming the project is implemented the set up costs of it are likely to be?
+What are the technological risks?
+    
 Command Line Examples 
 
 
