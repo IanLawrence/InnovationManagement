@@ -48,8 +48,8 @@ from django.core.urlresolvers import reverse
 
 
 # Local imports
-from Innovation.BDTools.models import   BusinessCase,  Spreadsheet
-from Innovation.BDTools import juiz
+from InnovationManagement.BDTools.models import   BusinessCase,  Spreadsheet
+from InnovationManagement.BDTools import juiz
  
 # forms       
 class BusinessCaseForm(ModelForm):

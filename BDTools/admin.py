@@ -16,7 +16,7 @@
 #===========================================================================
 
 
-from Innovation.BDTools.models import Spreadsheet, BusinessCase
+from InnovationManagement.BDTools.models import Spreadsheet, BusinessCase
 
 from django.contrib import admin
 

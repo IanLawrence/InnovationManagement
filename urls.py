@@ -16,7 +16,7 @@ urlpatterns = patterns('',
       (r'^admin/doc/', include('django.contrib.admindocs.urls')),
       
     #include the thememaker urls
-      (r'^', include('Innovation.BDTools.urls')),
+      (r'^', include('InnovationManagement.BDTools.urls')),
     
 
     # Uncomment the next line to enable the admin:

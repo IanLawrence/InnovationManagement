@@ -6,6 +6,14 @@ Portfolio Management Application
 
  **Released  by Ian Lawrence, root@ianlawrence.info 08 July 2009.**
 
+To quickly see how it works make a database called innova and change the media path in BDTools/urls.py to whatever core/media is on the checkout. Then
+
+python manage.py syncdb
+python namage.py runserver
+
+In production set LOCAL_DEV to false in settings.py and set up a proper server (mod_apache, wsgi etc) 
+
+
 - Copyright as per individual files
 *==========================*
 

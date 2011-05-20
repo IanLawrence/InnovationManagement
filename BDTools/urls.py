@@ -13,7 +13,7 @@
 from django.conf.urls.defaults import *
 from django.contrib import databrowse
 
-from Innovation.BDTools.forms import Spread1, Spread2, SpreadWizard
+from InnovationManagement.BDTools.forms import Spread1, Spread2, SpreadWizard
 
 from django.conf import settings
 
@@ -32,15 +32,15 @@ urlpatterns = patterns('',
      (r'^accounts/logout/$', 'django.contrib.auth.views.logout'),
      
       # BD Tools 
-     (r'^$', 'Innovation.BDTools.views.index'),
-     (r'^browse/$', 'Innovation.BDTools.views.browse'),
-     (r'^browse/(?P<project_id>\d+)/$', 'Innovation.BDTools.views.browsing'),
-     (r'^add/$', 'Innovation.BDTools.views.add'),
-     (r'^thanks/(?P<project_id>\d+)/$', 'Innovation.BDTools.views.thanks'),
-     (r'^calculate/(?P<new_spreadsheet_id>\d+)/$', 'Innovation.BDTools.views.calculate'),
+     (r'^$', 'InnovationManagement.BDTools.views.index'),
+     (r'^browse/$', 'InnovationManagement.BDTools.views.browse'),
+     (r'^browse/(?P<project_id>\d+)/$', 'InnovationManagement.BDTools.views.browsing'),
+     (r'^add/$', 'InnovationManagement.BDTools.views.add'),
+     (r'^thanks/(?P<project_id>\d+)/$', 'InnovationManagement.BDTools.views.thanks'),
+     (r'^calculate/(?P<new_spreadsheet_id>\d+)/$', 'InnovationManagement.BDTools.views.calculate'),
      (r'^spreadsheet/(?P<browsing_id>\d+)/$', SpreadWizard([Spread1, Spread2])),
-     (r'^rank/$', 'Innovation.BDTools.views.rank'),
-     (r'^assessed/$', 'Innovation.BDTools.views.assessed'),
+     (r'^rank/$', 'InnovationManagement.BDTools.views.rank'),
+     (r'^assessed/$', 'InnovationManagement.BDTools.views.assessed'),
 
      # about, credits etc
      (r'^about/$', 'Innovation.BDTools.views.about'),
@@ -49,10 +49,7 @@ urlpatterns = patterns('',
      # admin
      (r'^admin/', include(admin.site.urls)),
 
-     # serve media for runserver
-     (r'^media/(?P<path>.*)$', 'django.views.static.serve',{'document_root': '/home/ian/Web/django_projects/Innovation/core/media'}),
+     # uncomment to serve media for local server (Dhango 1.2)
+     (r'^media/(?P<path>.*)$', 'django.views.static.serve',{'document_root': '/home/ian/Dev/InnovationManagement/core/media'}),
 )
 
-# serve media for runserver
-if settings.LOCAL_DEV:
-    (r'^media/(?P<path>.*)$', 'django.views.static.serve',{'document_root': '/home/ian/Web/django_projects/Innovation/core/media'}),
